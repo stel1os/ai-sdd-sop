@@ -1,7 +1,7 @@
 # Spec-Driven Development (SDD)
 ### A Standard Operating Procedure for AI-Assisted Software Projects
 
-**Version:** v1.0.0 — 2026-05-21
+**Version:** v1.1.0 — 2026-05-24
 
 > Every design decision, implementation task, and test traces back to a spec requirement.
 > The spec is updated when requirements change — not the code.
@@ -205,6 +205,17 @@ A "looks good" verdict without reading the code is invalid. Every finding cites 
 6. **Tests trace to spec.** If you can't name the FR or invariant a test covers, the test is wrong.
 7. **Version bump on every master merge.** Including hotfixes and docs-only changes that affect the build artifact.
 8. **Source is authoritative.** Build artifacts are generated from `src/`, never edited. Working documents (SPEC, design, plan, SPRINT, AGENTS) are gitignored — they are intent and state, not deliverables.
+
+---
+
+## Working Rules
+
+These rules govern agent behavior during any task. They apply regardless of role or sprint phase.
+
+1. **Ask, don't assume.** If something is unclear, ask before writing a single line. Never make silent assumptions about intent, architecture, or requirements.
+2. **Simplest solution first.** Always implement the simplest thing that could work. Do not add abstractions or flexibility that weren't explicitly requested.
+3. **Don't touch unrelated code.** If a file or function is not directly part of the current task, do not modify it, even if you think it could be improved.
+4. **Flag uncertainty explicitly.** If not confident about an approach or technical detail, say so before proceeding. Confidence without certainty causes more damage than admitting a gap.
 
 ---
 
