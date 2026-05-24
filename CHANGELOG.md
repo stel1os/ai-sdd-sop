@@ -4,6 +4,14 @@ All notable changes to the SDD SOP are documented here.
 
 ---
 
+## v1.1.0 — 2026-05-24
+
+### Added: Working Rules
+
+New `## Working Rules` section added after `## The Eight Rules`. Four rules governing agent behavior at all times, regardless of role or sprint phase: ask don't assume, simplest solution first, don't touch unrelated code, flag uncertainty explicitly. Sourced from established project working rules to make them SOP-canonical.
+
+---
+
 ## v1.0.0 — 2026-05-21
 
 Initial release.
