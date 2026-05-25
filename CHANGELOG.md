@@ -20,10 +20,6 @@ New top-level section placed after "Why SDD". Concrete numbered steps for AI age
 
 The four rules in `## Working Rules` now match `templates/CLAUDE.md` verbatim — Think before coding / Simplest solution first / Surgical changes only / Plan, then verify. Rules 1–3 are rewordings of the v1.1.0 rules (same intent, sharper wording from the Karpathy framework). Rule 4 (Plan, then verify) is new and adds explicit pre-task planning with verification checkpoints; it replaces the prior "Flag uncertainty explicitly" rule, whose intent is now absorbed into rule 1.
 
-### Repo housekeeping: gitignore CLAUDE.md
-
-`.gitignore` added with `CLAUDE.md`. The repo-root `CLAUDE.md` (governance for this repo) is now untracked and personal/local. Contributors no longer see the governance contract in the repo — those rules live in PR-template-style guidance and in this CHANGELOG. `templates/CLAUDE.md` remains tracked (it is the downstream starter, not a governance file).
-
 ---
 
 ## v1.1.0 — 2026-05-24
