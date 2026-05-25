@@ -237,12 +237,14 @@ A "looks good" verdict without reading the code is invalid. Every finding cites 
 
 ## Working Rules
 
-These rules govern agent behavior during any task. They apply regardless of role or sprint phase.
+These rules govern agent behavior during any task. They apply regardless of role or sprint phase. They are reproduced verbatim in `templates/CLAUDE.md` so that toolchains which auto-load `CLAUDE.md` (Claude Code, Cursor) get them at session start.
 
-1. **Ask, don't assume.** If something is unclear, ask before writing a single line. Never make silent assumptions about intent, architecture, or requirements.
-2. **Simplest solution first.** Always implement the simplest thing that could work. Do not add abstractions or flexibility that weren't explicitly requested.
-3. **Don't touch unrelated code.** If a file or function is not directly part of the current task, do not modify it, even if you think it could be improved.
-4. **Flag uncertainty explicitly.** If not confident about an approach or technical detail, say so before proceeding. Confidence without certainty causes more damage than admitting a gap.
+1. **Think before coding.** State assumptions explicitly. When a request is ambiguous, present multiple interpretations and ask — never guess.
+2. **Simplest solution first.** Implement the simplest thing that could work. Do not add abstractions, flexibility, or error handling that weren't explicitly requested.
+3. **Surgical changes only.** Modify only what the task requires. Adjacent improvements need explicit authorization, even when the code looks wrong.
+4. **Plan, then verify.** For any multi-step task, state a brief plan with verification checkpoints up front. Define success criteria so progress is measurable.
+
+These rules are adapted from Andrej Karpathy's January 2026 CLAUDE.md framework (Think Before Coding / Simplicity First / Surgical Changes / Goal-Driven Execution).
 
 ---
 

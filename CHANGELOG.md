@@ -8,13 +8,21 @@ All notable changes to the SDD SOP are documented here.
 
 ### Added: templates/CLAUDE.md
 
-New optional behavioral starter for projects whose toolchain auto-loads `CLAUDE.md` (Claude Code, Cursor, etc.). Contains four working rules adapted from Andrej Karpathy's January 2026 CLAUDE.md framework — Think Before Coding / Simplicity First / Surgical Changes / Goal-Driven Execution — in the SOP's existing terse voice. Rules 1–3 align with the Working Rules added in v1.1.0; rule 4 (Plan, then verify) is new and adds explicit pre-task planning with verification checkpoints.
+New optional behavioral starter for projects whose toolchain auto-loads `CLAUDE.md` (Claude Code, Cursor, etc.). Contains four working rules adapted from Andrej Karpathy's January 2026 CLAUDE.md framework — Think Before Coding / Simplicity First / Surgical Changes / Goal-Driven Execution — in the SOP's existing terse voice.
 
 `AGENTS.md` remains the canonical tool-agnostic config. `CLAUDE.md` is a supplement, not a replacement.
 
 ### Added: README — "For AI Agents Adopting This SOP"
 
 New top-level section placed after "Why SDD". Concrete numbered steps for AI agents reading the SOP to set up a new project. Closes a discoverability gap — the existing "Using This SOP" section is human-targeted and lives at the bottom.
+
+### Changed: README Working Rules aligned with templates/CLAUDE.md
+
+The four rules in `## Working Rules` now match `templates/CLAUDE.md` verbatim — Think before coding / Simplest solution first / Surgical changes only / Plan, then verify. Rules 1–3 are rewordings of the v1.1.0 rules (same intent, sharper wording from the Karpathy framework). Rule 4 (Plan, then verify) is new and adds explicit pre-task planning with verification checkpoints; it replaces the prior "Flag uncertainty explicitly" rule, whose intent is now absorbed into rule 1.
+
+### Repo housekeeping: gitignore CLAUDE.md
+
+`.gitignore` added with `CLAUDE.md`. The repo-root `CLAUDE.md` (governance for this repo) is now untracked and personal/local. Contributors no longer see the governance contract in the repo — those rules live in PR-template-style guidance and in this CHANGELOG. `templates/CLAUDE.md` remains tracked (it is the downstream starter, not a governance file).
 
 ---
 
