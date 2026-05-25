@@ -1,7 +1,7 @@
 # Spec-Driven Development (SDD)
 ### A Standard Operating Procedure for AI-Assisted Software Projects
 
-**Version:** v1.1.0 — 2026-05-24
+**Version:** v1.2.0 — 2026-05-25
 
 > Every design decision, implementation task, and test traces back to a spec requirement.
 > The spec is updated when requirements change — not the code.
@@ -15,6 +15,32 @@ AI coding agents are fast but untethered. Without a spec as ground truth, they b
 SDD borrows the **mindset** of change control: write what you intend to build, build exactly that, verify it, release it. No improvisation. No scope creep. No "I thought you meant…"
 
 This is internal workflow discipline, not GxP. There is no external auditor, no signed deviation, no CAPA. The rigor comes from the process being followed, not from a regulator enforcing it.
+
+---
+
+## For AI Agents Adopting This SOP
+
+If you are an AI agent reading this SOP to set up or join a project, execute these steps in order. Do not skip ahead.
+
+1. **Read first, act later.** Read the **Document Stack**, **Five Roles**, **Session Start Protocol**, **Lifecycle**, **Eight Rules**, and **Working Rules** sections below before doing anything else.
+2. **Wait for an explicit user signal** before scaffolding the project, writing `SPEC.md`, or invoking any role. The SOP is the procedure; the user is the authority.
+3. **Download templates** from this repo into the project root (only when the user authorizes setup):
+   - `templates/AGENTS.md` → `AGENTS.md` — tool-agnostic project config (required)
+   - `templates/SPRINT.md` → `SPRINT.md` — sprint state tracker (required; gitignore it)
+   - `templates/CLAUDE.md` → `CLAUDE.md` — behavioral rules (optional; recommended if your toolchain auto-loads `CLAUDE.md`, e.g. Claude Code, Cursor)
+4. **Fill in every placeholder** in `AGENTS.md`. Never commit with `[bracketed]` text remaining. Ask the user when a placeholder has no obvious answer.
+5. **Verify with the user** before writing `SPEC.md`. The spec is user-authored or user-approved line by line; AI does not write specs unilaterally.
+6. **At every session start** after setup, follow the **Session Start Protocol**: read `AGENTS.md`, then `SPRINT.md`, then report position in one sentence before continuing.
+
+The three project files form a layered config:
+
+| File | Defines | Who edits | Updated |
+|------|---------|-----------|---------|
+| `CLAUDE.md` (optional) | **How** you work — behavioral rules | User | Rarely |
+| `AGENTS.md` | **What** this project is — roles, build, invariants | AI + User | Stable across a sprint |
+| `SPRINT.md` | **Where** the project is right now — gates | AI | At every gate |
+
+Never invent state, never skip the protocol, never silently reinterpret a requirement.
 
 ---
 
@@ -79,9 +105,10 @@ If `SPRINT.md` shows **Idle**, ask the user what to work on. If it shows a sprin
 1. Write `SPEC.md` — product vision, versioning strategy, numbered FRs. User writes or approves every line.
 2. Download `templates/AGENTS.md` from this repo into the project root. Fill in every placeholder.
 3. Download `templates/SPRINT.md` into the project root. Add it to `.gitignore`.
-4. Point your AI tool at `AGENTS.md` using your toolchain's convention. Every agent reads it at spawn.
-5. Set up the repo: `src/`, `test/`, `samples/` (or equivalent), `package.json` with `build` and `test` scripts.
-6. Create an initial regression test suite (even if empty) before writing any feature code.
+4. **(Optional)** Download `templates/CLAUDE.md` into the project root if your toolchain auto-loads `CLAUDE.md` (Claude Code, Cursor). It provides four behavioral working rules.
+5. Point your AI tool at `AGENTS.md` using your toolchain's convention. Every agent reads it at spawn.
+6. Set up the repo: `src/`, `test/`, `samples/` (or equivalent), `package.json` with `build` and `test` scripts.
+7. Create an initial regression test suite (even if empty) before writing any feature code.
 
 ### Feature Sprint
 
@@ -311,12 +338,13 @@ SDD is compatible with spec-kit tooling. If your project uses the spec-kit CLI o
 
 1. **Download `templates/AGENTS.md`** from this repo into your project root. Fill in every placeholder.
 2. **Download `templates/SPRINT.md`** into your project root. Gitignore it.
-3. **Point your AI tool at `AGENTS.md`** using whatever convention your toolchain requires. Every agent reads it at spawn.
-4. **Write `SPEC.md`** — product vision + numbered FRs. User writes or approves every line.
-5. **Reference this repo** in your `AGENTS.md` and project `README.md` so the SOP version is traceable.
-6. **Follow the lifecycle** above for every sprint.
+3. **(Optional) Download `templates/CLAUDE.md`** if your toolchain auto-loads it (Claude Code, Cursor). Four behavioral working rules; adapt to your project.
+4. **Point your AI tool at `AGENTS.md`** using whatever convention your toolchain requires. Every agent reads it at spawn.
+5. **Write `SPEC.md`** — product vision + numbered FRs. User writes or approves every line.
+6. **Reference this repo** in your `AGENTS.md` and project `README.md` so the SOP version is traceable.
+7. **Follow the lifecycle** above for every sprint.
 
-`AGENTS.md` is the machine-readable layer the SOP mandates. How your AI tool loads it is determined by your toolchain, not this SOP.
+`AGENTS.md` is the machine-readable layer the SOP mandates. How your AI tool loads it is determined by your toolchain, not this SOP. `CLAUDE.md` is an optional behavioral supplement for tools that auto-load it.
 
 ---
 

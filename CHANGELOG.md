@@ -4,6 +4,20 @@ All notable changes to the SDD SOP are documented here.
 
 ---
 
+## v1.2.0 — 2026-05-25
+
+### Added: templates/CLAUDE.md
+
+New optional behavioral starter for projects whose toolchain auto-loads `CLAUDE.md` (Claude Code, Cursor, etc.). Contains four working rules adapted from Andrej Karpathy's January 2026 CLAUDE.md framework — Think Before Coding / Simplicity First / Surgical Changes / Goal-Driven Execution — in the SOP's existing terse voice. Rules 1–3 align with the Working Rules added in v1.1.0; rule 4 (Plan, then verify) is new and adds explicit pre-task planning with verification checkpoints.
+
+`AGENTS.md` remains the canonical tool-agnostic config. `CLAUDE.md` is a supplement, not a replacement.
+
+### Added: README — "For AI Agents Adopting This SOP"
+
+New top-level section placed after "Why SDD". Concrete numbered steps for AI agents reading the SOP to set up a new project. Closes a discoverability gap — the existing "Using This SOP" section is human-targeted and lives at the bottom.
+
+---
+
 ## v1.1.0 — 2026-05-24
 
 ### Added: Working Rules
