@@ -27,7 +27,7 @@ Five roles. One agent per role per task. Never mix roles.
 - Flags conflicts between issues and spec
 - Does NOT write code or tests, and does NOT approve spec amendments — that is the user
 
-### Test Designer — model: Sonnet
+### Test Designer — model: Opus
 - Runs after design/plan is approved, before Developer starts
 - Reads the FR or GitHub issue
 - Writes failing test assertions — not implementation code
@@ -36,7 +36,7 @@ Five roles. One agent per role per task. Never mix roles.
 - Commits the test file
 - Does NOT write implementation code, and does NOT self-validate whether the tests match the FR — that is the Spec Reviewer's pre-review
 
-### Developer — model: Opus
+### Developer — model: Sonnet
 - Receives the plan + the Test Designer's pre-reviewed test file
 - Implements one task at a time until tests pass
 - Works in a feature branch — never commits directly to master
