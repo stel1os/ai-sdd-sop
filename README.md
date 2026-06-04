@@ -1,7 +1,7 @@
 # Spec-Driven Development (SDD)
 ### A Standard Operating Procedure for AI-Assisted Software Projects
 
-**Version:** v1.3.0 — 2026-06-04
+**Version:** v1.3.1 — 2026-06-04
 
 > Every design decision, implementation task, and test traces back to a spec requirement.
 > The spec is updated when requirements change — not the code.
@@ -69,8 +69,8 @@ One agent per role per task. Roles never mix.
 | # | Role | Phase | Model | Does | Does NOT |
 |---|------|-------|-------|------|----------|
 | 1 | **Planner** | Sprint start; spec amendments | Sonnet | Reads spec + open issues. Proposes build order. Flags spec conflicts. Drafts spec amendments when escalated. | Write code or tests. Approve amendments — that is the user. |
-| 2 | **Test Designer** | Before implementation | Sonnet | Reads the FR or issue. Writes failing test assertions. Commits the test file before Developer starts. | Write implementation code. Decide whether the test correctly captures the FR — that is the Spec Reviewer's pre-review. |
-| 3 | **Developer** | Implementation | Opus | Receives plan + pre-reviewed tests. Implements until tests pass. Opens PR. Escalates spec ambiguity instead of guessing. | Merge. Interpret requirements. Modify tests to make them pass — escalate inconsistency instead. |
+| 2 | **Test Designer** | Before implementation | Opus | Reads the FR or issue. Writes failing test assertions. Commits the test file before Developer starts. | Write implementation code. Decide whether the test correctly captures the FR — that is the Spec Reviewer's pre-review. |
+| 3 | **Developer** | Implementation | Sonnet | Receives plan + pre-reviewed tests. Implements until tests pass. Opens PR. Escalates spec ambiguity instead of guessing. | Merge. Interpret requirements. Modify tests to make them pass — escalate inconsistency instead. |
 | 4 | **Spec Reviewer** | (a) before Developer starts, (b) after each task | Sonnet | **Pre-review:** reads the Test Designer's tests against the FR; approves or returns to Test Designer. **Post-review:** reads the actual code; compares to spec line-by-line; every finding cites file:line. | Comment on code style, structure, or naming — that is the Code Reviewer. Decide what the spec should say. |
 | 5 | **Code Reviewer** | After Spec Reviewer approves | Sonnet | Reviews code quality, architecture, test coverage. Returns Critical / Important / Minor. | Second-guess spec requirements. Approve code the Spec Reviewer rejected. Run in parallel with Spec Reviewer. |
 

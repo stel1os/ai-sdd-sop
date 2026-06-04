@@ -4,6 +4,15 @@ All notable changes to the SDD SOP are documented here.
 
 ---
 
+## v1.3.1 — 2026-06-04
+
+### Fixed: stale version references across repo files
+
+- `templates/AGENTS.md` — SOP reference updated from `v1.0` to `v1.3`
+- `README.md` Five Roles table — Test Designer and Developer model columns corrected to match `templates/AGENTS.md` (Test Designer: Sonnet → Opus; Developer: Opus → Sonnet); these were missed in v1.3.0
+
+---
+
 ## v1.3.0 — 2026-06-04
 
 ### Changed: templates/AGENTS.md — model assignments

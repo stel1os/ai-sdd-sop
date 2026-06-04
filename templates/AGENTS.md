@@ -11,7 +11,7 @@ Reference: https://github.com/stel1os/ai-sdd-sop
 
 **Repo:** [GitHub URL]
 **Spec:** [Path to SPEC.md — e.g., vault/artifacts/my-project/SPEC.md]
-**SOP:** https://github.com/stel1os/ai-sdd-sop (v1.0)
+**SOP:** https://github.com/stel1os/ai-sdd-sop (v1.3)
 **Current version:** v0.1.0
 
 ---
