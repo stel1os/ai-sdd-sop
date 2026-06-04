@@ -4,6 +4,14 @@ All notable changes to the SDD SOP are documented here.
 
 ---
 
+## v1.4.0 — 2026-06-04
+
+### Changed: templates/AGENTS.md — SOP reference updated to v1.3
+
+The self-referential SOP version pin in the template was stale (v1.0). Updated to reflect the current release (v1.3).
+
+---
+
 ## v1.3.0 — 2026-06-04
 
 ### Changed: templates/AGENTS.md — model assignments

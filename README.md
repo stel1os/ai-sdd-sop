@@ -1,7 +1,7 @@
 # Spec-Driven Development (SDD)
 ### A Standard Operating Procedure for AI-Assisted Software Projects
 
-**Version:** v1.3.0 — 2026-06-04
+**Version:** v1.4.0 — 2026-06-04
 
 > Every design decision, implementation task, and test traces back to a spec requirement.
 > The spec is updated when requirements change — not the code.
