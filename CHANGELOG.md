@@ -4,6 +4,17 @@ All notable changes to the SDD SOP are documented here.
 
 ---
 
+## v1.3.0 — 2026-06-04
+
+### Changed: templates/AGENTS.md — model assignments
+
+Swapped model assignments for Test Designer and Developer based on reasoning load, not implementation complexity.
+
+- **Test Designer:** Sonnet → Opus. The Test Designer has the least constrained reasoning task in the pipeline — it must interpret an FR or issue and decide what correct behavior looks like with no existing artifact to check against. Mis-specified tests are worse than no tests; Opus reduces that risk.
+- **Developer:** Opus → Sonnet. The Developer's job is the most constrained: it receives a detailed plan and a pre-reviewed test file, and its success criterion is unambiguous (make the tests pass without modifying them). Sonnet is sufficient for execution against a known target. Opus may still be used per-task for genuinely complex implementation, but is not the default.
+
+---
+
 ## v1.2.0 — 2026-05-25
 
 ### Added: templates/CLAUDE.md
