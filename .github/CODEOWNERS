@@ -1,0 +1,5 @@
+# All files require owner review
+* @stel1os
+
+# Explicit protection for agent-facing templates (prompt injection risk)
+templates/ @stel1os
