@@ -1,0 +1,10 @@
+# Claude Code local config
+.claude/
+
+# Windows shortcuts
+*.lnk
+
+# SOP working documents (gitignored per SDD SOP)
+SPEC.md
+SPRINT.md
+AGENTS.md
