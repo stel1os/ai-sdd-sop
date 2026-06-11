@@ -4,6 +4,34 @@ All notable changes to the SDD SOP are documented here.
 
 ---
 
+## v1.4.0 — 2026-06-11
+
+### Changed: working documents are now committed (reverses a v1.0 decision)
+
+`SPEC.md`, design docs, plans, and `AGENTS.md` are committed; only `SPRINT.md` stays gitignored. The v1.0 rationale ("working documents are AI working memory, not product deliverables") was not wrong, but it left the spec — the SOP's own source of truth — as the only load-bearing document without change control. The Spec Amendment Protocol's "user approves the diff" is now a literal git diff: step 5 becomes a `docs(spec):` commit. `AGENTS.md` carries a note to keep machine-specific paths out of it. Rule 8, the Document Stack, and all setup steps updated.
+
+### Changed: durable model tiers replace model names
+
+Roles now specify **fast / standard / frontier** tiers instead of Haiku/Sonnet/Opus, ending the stale-model-name maintenance burden (v1.3.1 was already such a fix). One mapping footnote (as of 2026-06: fast = Haiku, standard = Sonnet, frontier = Opus/Fable) is the only line that ever goes stale. Test Designer remains frontier per the v1.3.0 reasoning-load rationale.
+
+### Changed: task-complexity tiering is now the default
+
+The mechanical/standard/architectural tier table moved from Scaling bottleneck #1 into the main Five Roles section. The plan doc classifies every task; unclassified tasks default to standard. Developer and reviewer tiers are "per task". Skipping the Test Designer for `chore:`/`docs:`/`ci:` commits is likewise now the default rather than a scaling mitigation.
+
+### Added: Review Rejection Loop
+
+The previously undocumented most-common path. A reviewer rejection produces a findings document (file:line + criterion); a fresh Developer (or Test Designer) context receives plan + tests + findings; the same reviewer role re-reviews; two failed cycles on one task escalate to the user, since repeated rejection usually signals a spec or plan defect.
+
+### Added: Human Gates table + `⏳ awaiting user` state
+
+Explicit table of which gates require human sign-off (spec content/amendments, design doc, plan doc, version bump type, smoke check, PR merge, release tag) vs. AI-autonomous gates (reviewer verdicts). New `⏳ awaiting user` gate state in the Session Start Protocol and `templates/SPRINT.md`: agents stop at a human gate and do not continue until the user responds.
+
+### Changed: structural conciseness pass
+
+README shrank from 363 to ~290 lines despite the additions. "For AI Agents Adopting This SOP", "New Project Setup", and "Using This SOP" merged into one "Adopting This SOP" section; feature and bug-fix sprint diagrams merged with inline variants; the Spec Compliance Review section folded into the Spec Reviewer role row; Scaling compressed to one-line mitigations; spec-kit section compressed. Eight Rules, Working Rules, role boundaries, protocols, and checklists intact. Claude Code skill names (`/brainstorm`, `/writing-plans`) replaced with generic phase names; npm commands generalized.
+
+---
+
 ## v1.3.1 — 2026-06-04
 
 ### Fixed: stale version references across repo files

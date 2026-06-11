@@ -4,7 +4,5 @@
 # Windows shortcuts
 *.lnk
 
-# SOP working documents (gitignored per SDD SOP)
-SPEC.md
+# Sprint state (the only gitignored working document per SDD SOP v1.4)
 SPRINT.md
-AGENTS.md
