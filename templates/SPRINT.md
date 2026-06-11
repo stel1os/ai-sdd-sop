@@ -3,6 +3,8 @@
 > Read this at every session start before doing anything else.
 > Mark each gate complete before moving to the next. Never batch updates.
 > This file is gitignored — it is working memory, not a deliverable.
+> Gate states: ⬜ open · ✅ complete · ⏳ awaiting user.
+> At a human gate (see SOP Human Gates table), mark ⏳ and stop until the user responds.
 
 ---
 
